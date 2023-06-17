@@ -39,6 +39,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1",
 ]
 
+CSRF_TRUSTED_ORIGINS = ["localhost", "127.0.0.1", "nielsscholz.pythonanywhere.com"]
 
 # Application definition
 
