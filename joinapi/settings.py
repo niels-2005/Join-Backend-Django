@@ -32,6 +32,12 @@ ALLOWED_HOSTS = [
     "http://localhost:4200",
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:4200",
+    "localhost",
+    "nielsscholz.pythonanywhere.com",
+    "127.0.0.1",
+]
 
 # Application definition
 
@@ -57,6 +63,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
