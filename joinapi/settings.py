@@ -41,6 +41,9 @@ CORS_ALLOWED_ORIGINS = [
 
 CSRF_TRUSTED_ORIGINS = ["localhost", "127.0.0.1", "nielsscholz.pythonanywhere.com"]
 
+CSRF_COOKIE_SECURE = False
+
+
 # Application definition
 
 INSTALLED_APPS = [
