@@ -29,16 +29,16 @@ ALLOWED_HOSTS = [
     "nielsscholz.pythonanywhere.com",
     "127.0.0.1",
     "localhost",
-    "http://localhost:4200",
 ]
 
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:4200",
-    "localhost",
-    "nielsscholz.pythonanywhere.com",
-    "127.0.0.1",
+    "http://localhost",
+    "https://nielsscholz.pythonanywhere.com",
+    "http://127.0.0.1",
 ]
+
 
 # Application definition
 
