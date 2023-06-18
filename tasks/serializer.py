@@ -1,10 +1,9 @@
 from rest_framework import serializers
 from .models import Task
+from django.contrib.auth.models import User
 
 
 class TaskSerializer(serializers.ModelSerializer):
-    assigned_to = serializers.StringRelatedField(many=True)
-
     class Meta:
         model = Task
         fields = [
@@ -13,7 +12,8 @@ class TaskSerializer(serializers.ModelSerializer):
             "description",
             "category",
             "color",
-            "assigned_to",
+            "assigned_to_names",
             "deadline",
             "priority",
+            "status",
         ]
