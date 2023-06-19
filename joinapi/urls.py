@@ -1,27 +1,16 @@
 from django.urls import path, include
-from django.views.decorators.csrf import csrf_exempt
-from django.contrib import admin
+from rest_framework.routers import DefaultRouter
 from tasks.views import TaskViewSet
+from contacts.views import ContactViewSet
+from django.contrib import admin
+
+router = DefaultRouter()
+router.register(r"tasks", TaskViewSet, basename="tasks")
+router.register(r"contacts", ContactViewSet, basename="contacts")
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include("dj_rest_auth.urls")),
     path("api/registration/", include("dj_rest_auth.registration.urls")),
-    path(
-        "api/join/tasks/",
-        TaskViewSet.as_view({"get": "list", "post": "create"}),
-        name="tasks",
-    ),
-    path(
-        "api/join/tasks/<int:pk>/",
-        TaskViewSet.as_view(
-            {
-                "get": "retrieve",
-                "put": "update",
-                "patch": "partial_update",
-                "delete": "destroy",
-            }
-        ),
-        name="task-detail",
-    ),
+    path("api/join/", include(router.urls)),
 ]
