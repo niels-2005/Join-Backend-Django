@@ -26,7 +26,7 @@ class Task(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField(default="Do your work")
     category = models.CharField(max_length=50, default="To Do")
-    color = models.CharField(max_length=7, default="#FFFFFF")
+    color = models.CharField(max_length=7, default="#8AA4FF")
     assigned_to_names = models.CharField(max_length=255, blank=True, null=True)
     deadline = models.DateField()
     priority = models.CharField(max_length=1, choices=PRIORITY_CHOICES, default="M")
