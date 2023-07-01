@@ -37,9 +37,15 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost",
     "https://scholzniels.pythonanywhere.com",
     "http://127.0.0.1",
+    "https://niels-scholz.com",
 ]
 
-CSRF_TRUSTED_ORIGINS = ["localhost", "127.0.0.1", "scholzniels.pythonanywhere.com"]
+CSRF_TRUSTED_ORIGINS = [
+    "localhost",
+    "127.0.0.1",
+    "scholzniels.pythonanywhere.com",
+    "https://niels-scholz.com",
+]
 
 CSRF_COOKIE_SECURE = False
 SESSION_COOKIE_SECURE = False
