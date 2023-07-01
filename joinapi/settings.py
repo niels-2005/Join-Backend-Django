@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-ujx03oig*-aq7y(4p=_+_szr%j!8!#az^m*^!x3@cv*c99n&7&
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "nielsscholz.pythonanywhere.com",
+    "scholzniels.pythonanywhere.com",
     "127.0.0.1",
     "localhost",
 ]
@@ -35,11 +35,11 @@ ALLOWED_HOSTS = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:4200",
     "http://localhost",
-    "https://nielsscholz.pythonanywhere.com",
+    "https://scholzniels.pythonanywhere.com",
     "http://127.0.0.1",
 ]
 
-CSRF_TRUSTED_ORIGINS = ["localhost", "127.0.0.1", "nielsscholz.pythonanywhere.com"]
+CSRF_TRUSTED_ORIGINS = ["localhost", "127.0.0.1", "scholzniels.pythonanywhere.com"]
 
 CSRF_COOKIE_SECURE = False
 SESSION_COOKIE_SECURE = False
