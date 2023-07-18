@@ -23,8 +23,8 @@ class Task(models.Model):
         ("done", "Done"),
     ]
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
+    created_from = models.CharField(max_length=50)
     description = models.TextField(default="Do your work")
     category = models.CharField(max_length=50, default="To Do")
     color = models.CharField(max_length=7, default="#8AA4FF")
