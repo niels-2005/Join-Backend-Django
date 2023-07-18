@@ -16,4 +16,5 @@ class TaskSerializer(serializers.ModelSerializer):
             "deadline",
             "priority",
             "status",
+            "user",
         ]

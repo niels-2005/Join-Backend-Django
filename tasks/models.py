@@ -23,6 +23,7 @@ class Task(models.Model):
         ("done", "Done"),
     ]
 
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     description = models.TextField(default="Do your work")
     category = models.CharField(max_length=50, default="To Do")
